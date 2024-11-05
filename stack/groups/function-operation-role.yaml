@@ -1,0 +1,59 @@
+template:
+  path: function-operation-role.yaml
+
+entries:
+
+  # - fo_role_name: FR_OPERATION
+  #   roles:
+  #     - name: FR_PRJ_RL_AVTR_DEV_EDW_CORE_ENGINEER
+  #       deprovision: false
+  #     - name: FR_PRJ_RL_AVTR_DEV_EDW_CORE_READER
+  #       deprovision: true
+  #     - name: FR_PRJ_RL_AVTR_DEV_EDW_CORE_PUB_READER
+  #       deprovision: true
+  #     - name: FR_PRJ_RL_AVTR_DEV_OP_TESTING_ENGINEER
+  #       deprovision: false
+  #     - name: FR_PRJ_RL_AVTR_DEV_OP_TESTING_READER
+  #       deprovision: true
+  #     - name: FR_PRJ_RL_AVTR_DEV_OP_TESTING_PUB_READER
+  #       deprovision: true
+  #     - name: FR_PRJ_RL_AVTR_DEV_FIVETRAN_ENGINEER
+  #       deprovision: false
+  #     - name: FR_PRJ_RL_AVTR_DEV_FIVETRAN_READER
+  #       deprovision: true
+  #     - name: FR_PRJ_RL_AVTR_PROD_FIVETRAN_ENGINEER
+  #       deprovision: false
+  #     - name: FR_PRJ_RL_AVTR_PROD_FIVETRAN_READER
+  #       deprovision: false
+  #     - name: FR_PRJ_RL_AVTR_QA_FIVETRAN_ENGINEER
+  #       deprovision: true
+  #     - name: FR_PRJ_RL_AVTR_QA_FIVETRAN_READER
+  #       deprovision: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

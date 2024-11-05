@@ -1,0 +1,41 @@
+template:
+  path: warehouse.yaml
+
+defaults:
+  warehouse_size: XSMALL
+  scaling_policy: ECONOMY
+  auto_suspend: 600
+  auto_resume: true
+  min_cluster_count: 1
+  max_cluster_count: 1
+  creditQuota: 100
+  frequency: MONTHLY
+  startTimestamp: IMMEDIATELY
+  destroy:  false
+entries:
+  - name: FIVETRAN_DEV
+    size: XSMALL
+    max_cluster_count: 1
+    resourceMonitor: AVTR_FIVTRAN_RM
+    triggers:
+      - threshold:  75
+        action: NOTIFY
+      - threshold:  100
+        action: NOTIFY
+      - threshold:  125
+        action: NOTIFY
+
+
+  - name: OP_TESTING
+    destroy: false
+    size: XSMALL
+    max_cluster_count: 1
+    resourceMonitor: AVTR_DEV_OP_TESTING_RM
+    triggers:
+      - threshold:  75
+        action: NOTIFY
+      - threshold:  100
+        action: NOTIFY
+      - threshold:  125
+        action: NOTIFY
+

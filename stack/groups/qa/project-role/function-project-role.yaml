@@ -1,0 +1,36 @@
+template:
+  path: function-project-role.yaml
+
+entries:
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_QA_FIVETRAN_ENGINEER
+  #   roles:
+  #     - name: AR_RL_AVTR_QA_FIVETRAN
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_EAGLE_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_UNICORN_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_EWM_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_CFIN_RW
+  #       deprovision: false
+
+
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_QA_FIVETRAN_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_FIVETRAN_AUDIT
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_EAGLE_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_UNICORN_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_EWM_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_QA_SAP_CFIN_RO
+  #       deprovision: false
+  #     - name: AR_RL_AVTR_QA_FIVETRAN
+  #       deprovision: false
+  #     - name: AR_RL_AVTR_FIVETRAN_AUDIT
+  #       deprovision: false

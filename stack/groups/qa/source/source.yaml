@@ -1,0 +1,29 @@
+template:
+  path: source.yaml
+
+
+entries:
+    - source: QA_SAP_EAGLE
+      destroy: false
+    # - source: QA_SAP_UNICORN
+    #   destroy: false
+    # - source: QA_SAP_EWM
+    #   destroy: false
+    # - source: QA_SAP_CFIN
+    #   destroy: false
+    # - source: QA_ATG
+    #   destroy: false
+    # - source: QA_ITS_ARCHIVAL
+    #   destroy: false
+    # - source: QA_ITS_MASTER
+    #   destroy: false
+    # - source: QA_ITS_TPE
+    #   destroy: false
+    # - source: QA_ITS_TPN
+    #   destroy: false
+    # - source: QA_IM
+    #   destroy: false
+    # - source: QA_CUSTOMER_SERVICE
+    #   destroy: false
+    # - source: QA_STIBO
+    #   destroy: false

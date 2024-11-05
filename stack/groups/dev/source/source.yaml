@@ -1,0 +1,33 @@
+template:
+  path: source.yaml
+
+
+entries:
+    - source: DEV_SAP_EAGLE
+      destroy: false
+    # - source: DEV_SAP_UNICORN
+    #   destroy: false
+    # - source: DEV_SAP_EWM
+    #   destroy: false
+    # - source: DEV_SAP_CFIN
+    #   destroy: false
+    # - source: DEV_ATG
+    #   destroy: false
+    # - source: DEV_ITS_ARCHIVAL
+    #   destroy: false
+    # - source: DEV_ITS_MASTER
+    #   destroy: false
+    # - source: DEV_ITS_TPE
+    #   destroy: false
+    # - source: DEV_ITS_TPN
+    #   destroy: false
+    # - source: DEV_IM
+    #   destroy: false
+    # - source: DEV_CUSTOMER_SERVICE
+    #   destroy: false
+    # - source: DEV_STIBO
+    #   destroy: false
+
+
+
+

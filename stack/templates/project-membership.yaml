@@ -1,0 +1,10 @@
+roleGrants:
+  {% for rl in roles %}
+  - name: "{{rl.name}}"
+    {% if username is truthy %}
+    toUsers:
+      - "{{ username }}"
+    {% endif %}
+    destroy: "{{rl.deprovision}}"
+  {% endfor %}
+

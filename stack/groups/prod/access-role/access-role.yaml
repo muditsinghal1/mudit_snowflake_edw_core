@@ -1,0 +1,12 @@
+template:
+  path: access-role.yaml
+
+entries:
+  - ar_role_name: AR_RL_AVTR_PROD_FIVETRAN
+    objects:
+      - name: WH_FIVETRAN_PROD
+        type: warehouse
+        privilege: USAGE
+        deprovision: false
+
+

@@ -1,0 +1,10 @@
+template:
+  path: source.yaml
+
+
+entries:
+    - source: FIVETRAN_AUDIT
+      destroy: false
+    
+
+

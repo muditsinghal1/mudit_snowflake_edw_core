@@ -1,0 +1,335 @@
+databases:
+  - name: "AVTR_DB_S_{{source}}"
+  
+schemas:
+  - name: CLEANED
+    database: "AVTR_DB_S_{{source}}"
+  - name: RAW
+    database: "AVTR_DB_S_{{source}}"
+
+roles:
+  # Data role
+  - name: "DR_RL_AVTR_S_{{source}}_RW"
+  - name: "DR_RL_AVTR_S_{{source}}_RO"
+
+
+privilegeGrants:
+
+
+  # Grant USAGE privileges on database to DR_RO
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+
+  # Grant USAGE privileges on all & future schema in database to DR_RO   
+  - privilege: "USAGE"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "SCHEMAS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true    
+    grantOption: false
+
+  # TABLE
+  # Grant SELECT privileges on ALL & FUTURE  "TABLES" in database to DR_RO
+  - privilege: "SELECT"
+    objectType: "ALL TABLES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+    
+  - privilege: "SELECT"
+    objectType: "TABLES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true
+    grantOption: false
+
+    # External Table
+  # Grant "SELECT" privileges on ALL & FUTURE  "EXTERNAL TABLES" in database to DR_RO
+  - privilege: "SELECT"
+    objectType: "ALL EXTERNAL TABLES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+    
+  - privilege: "SELECT"
+    objectType: "EXTERNAL TABLES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true
+    grantOption: false
+
+    # View
+  # Grant "SELECT" privileges on ALL & FUTURE  "VIEWS" in database to DR_RO
+  - privilege: "SELECT"
+    objectType: "ALL VIEWS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+    
+  - privilege: "SELECT"
+    objectType: "VIEWS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true    
+    grantOption: false
+
+    #Materialized view
+  # Grant "SELECT" privileges on ALL & FUTURE  "MATERIALIZED VIEW" in database to DR_RO
+  - privilege: "SELECT"
+    objectType: "ALL MATERIALIZED VIEWS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+    
+  - privilege: "SELECT"
+    objectType: "MATERIALIZED VIEWS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true        
+    grantOption: false
+
+    # Task
+  # Grant "SELECT" privileges on ALL & FUTURE  "TASK" in database to DR_RO
+  - privilege: "MONITOR"
+    objectType: "ALL TASKS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+    
+  - privilege: "MONITOR"
+    objectType: "TASKS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true       
+    grantOption: false
+
+    # Stage
+  # Grant "SELECT" privileges on ALL & FUTURE  "STAGE" in database to DR_RO
+  - privilege: "READ"
+    objectType: "ALL STAGES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    grantOption: false
+    
+  - privilege: "READ"
+    objectType: "STAGES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RO"
+    future: true           
+    grantOption: false
+
+  # Grant ALL privileges on all & FUTURE schema in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL SCHEMAS IN DATABASE" 
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: true
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "SCHEMAS" 
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true        
+    grantOption: true
+    
+ # Grant CREATE SCHEMA to DR_RW
+  - privilege: "CREATE SCHEMA"
+    objectType: "DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: true
+
+  # Grant USAGE privileges on database to DR_RW
+  - privilege: "USAGE"
+    objectType: "DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+
+  # Grant USAGE privileges on all & future schema in database to DR_RW  
+  - privilege: "USAGE"
+    objectType: "ALL SCHEMAS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+
+  - privilege: "USAGE"
+    objectType: "SCHEMAS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true   
+    grantOption: false
+
+    # TABLE
+  # Grant ALL privileges on ALL & FUTURE "TABLES" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL TABLES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "TABLES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true       
+    grantOption: false
+
+    # External Table
+  # Grant "ALL" privileges on ALL & FUTURE  "EXTERNAL TABLES" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL EXTERNAL TABLES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "EXTERNAL TABLES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true     
+    grantOption: false
+
+    # View
+  # Grant "ALL" privileges on ALL & FUTURE  "VIEWS" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL VIEWS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "VIEWS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true     
+    grantOption: false
+
+    #Materialized view
+  # Grant "ALL" privileges on ALL & FUTURE  "MATERIALIZED VIEW" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL MATERIALIZED VIEWS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "MATERIALIZED VIEWS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true     
+    grantOption: false
+
+    #Stream
+  # Grant "ALL" privileges on ALL & FUTURE  "STREAMS" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL STREAMS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false  
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "STREAMS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true    
+    grantOption: false
+    
+    # Task
+  # Grant "ALL" privileges on ALL & FUTURE  "TASK" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL TASKS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "TASKS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true  
+    grantOption: false
+
+    # Stage
+  # Grant "ALL" privileges on ALL & FUTURE  "STAGE" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL STAGES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "STAGES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true  
+    grantOption: false
+
+    # File Format
+  # Grant "ALL" privileges on ALL & FUTURE  "FILE FORMAT" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL FILE FORMATS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "FILE FORMATS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true  
+    grantOption: false
+    
+    # Sequence
+  # Grant "ALL" privileges on ALL & FUTURE  "SEQUENCE" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL SEQUENCES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "SEQUENCES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true  
+    grantOption: false
+    
+    # Function
+  # Grant "ALL" privileges on ALL & FUTURE  "FUNCTION" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL FUNCTIONS IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "FUNCTIONS"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true  
+    grantOption: false
+    
+    # Procedure
+  # Grant "ALL" privileges on ALL & FUTURE  "PROCEDURE" in database to DR_RW
+  - privilege: "ALL PRIVILEGES"
+    objectType: "ALL PROCEDURES IN DATABASE"
+    objectName: "AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    grantOption: false
+    
+  - privilege: "ALL PRIVILEGES"
+    objectType: "PROCEDURES"
+    objectName: "DATABASE AVTR_DB_S_{{source}}"
+    roleName: "DR_RL_AVTR_S_{{source}}_RW"
+    future: true  
+    grantOption: false  
