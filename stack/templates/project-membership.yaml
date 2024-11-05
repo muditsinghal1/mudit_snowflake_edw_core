@@ -1,4 +1,5 @@
 roleGrants:
+  {% if roles is truthy %}  
   {% for rl in roles %}
   - name: "{{rl.name}}"
     {% if username is truthy %}
@@ -7,4 +8,5 @@ roleGrants:
     {% endif %}
     destroy: "{{rl.deprovision}}"
   {% endfor %}
+  {% endif %}
 
