@@ -1,0 +1,6 @@
+template:
+  path: op-mgmt-db.yaml
+
+entries:
+    - dbname: OP_MGMT
+      destroy: false

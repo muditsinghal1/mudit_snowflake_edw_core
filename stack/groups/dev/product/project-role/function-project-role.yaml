@@ -1,0 +1,57 @@
+template:
+  path: function-project-role.yaml
+
+entries:
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_DEV_EDW_CORE_ENGINEER
+  #   roles:
+  #     - name: AR_RL_AVTR_DEV_EDW_CORE
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_P_DEV_EDW_CORE_RW
+  #       deprovision: false
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_DEV_EDW_CORE_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_DEV_EDW_CORE
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_P_DEV_EDW_CORE_RO
+  #       deprovision: false
+
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_DEV_EDW_CORE_PUB_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_DEV_EDW_CORE
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_P_DEV_EDW_CORE_PUB_RO
+  #       deprovision: false
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_DEV_OP_TESTING_ENGINEER
+  #   roles:
+  #     - name: AR_RL_AVTR_DEV_OP_TESTING
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_P_DEV_OP_TESTING_RW
+  #       deprovision: false	
+  #     # - name: DR_RL_AVTR_S_DEV_SAP_EAGLE_RO
+  #     #   deprovision: true
+  #     # - name: DR_RL_AVTR_S_DEV_SAP_UNICORN_RO
+  #     #   deprovision: true
+  #     # - name: DR_RL_AVTR_S_DEV_SAP_EWM_RO
+  #     #   deprovision: true
+  #     # - name: DR_RL_AVTR_S_DEV_SAP_CFIN_RO
+  #     #   deprovision: true
+
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_DEV_OP_TESTING_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_DEV_OP_TESTING
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_P_DEV_OP_TESTING_RO
+  #       deprovision: false	
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_DEV_OP_TESTING_PUB_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_DEV_OP_TESTING
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_P_DEV_OP_TESTING_PUB_RO
+  #       deprovision: false
+

@@ -1,0 +1,18 @@
+template:
+  path: function-project-role.yaml
+
+entries:
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_OP_MGMT_ENGINEER
+  #   roles:
+  #     - name: AR_RL_AVTR_OP_MGMT
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_OP_MGMT_RW
+  #       deprovision: false
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_OP_MGMT_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_OP_MGMT
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_OP_MGMT_RO
+  #       deprovision: false
