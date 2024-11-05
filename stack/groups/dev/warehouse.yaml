@@ -26,16 +26,16 @@ entries:
         action: NOTIFY
 
 
-  - name: OP_TESTING
-    destroy: false
-    size: XSMALL
-    max_cluster_count: 1
-    resourceMonitor: AVTR_DEV_OP_TESTING_RM
-    triggers:
-      - threshold:  75
-        action: NOTIFY
-      - threshold:  100
-        action: NOTIFY
-      - threshold:  125
-        action: NOTIFY
+  # - name: OP_TESTING
+  #   destroy: false
+  #   size: XSMALL
+  #   max_cluster_count: 1
+  #   resourceMonitor: AVTR_DEV_OP_TESTING_RM
+  #   triggers:
+  #     - threshold:  75
+  #       action: NOTIFY
+  #     - threshold:  100
+  #       action: NOTIFY
+  #     - threshold:  125
+  #       action: NOTIFY
 

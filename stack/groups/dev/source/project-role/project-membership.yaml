@@ -2,10 +2,10 @@ template:
   path: project-membership.yaml
 
 entries:
-  - username: SVC_AVTR_DEV_FIVETRAN
-    roles:
-      - name: FR_PRJ_RL_AVTR_DEV_FIVETRAN_ENGINEER
-        deprovision:  false
+  # - username: SVC_AVTR_DEV_FIVETRAN
+    # roles:
+      # - name: FR_PRJ_RL_AVTR_DEV_FIVETRAN_ENGINEER
+      #   deprovision:  false
 
   # - username: MUDIT.SINGHAL@AVANTORSCIENCES.COM
   #   roles:

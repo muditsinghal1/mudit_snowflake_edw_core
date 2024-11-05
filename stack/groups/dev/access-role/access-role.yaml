@@ -9,19 +9,19 @@ entries:
         privilege: USAGE
         deprovision: false
 
-  - ar_role_name: AR_RL_AVTR_DEV_EDW_CORE
-    objects:
-      - name: WH_EDW_CORE_DEV
-        type: warehouse
-        privilege: USAGE
-        deprovision: false
+  # - ar_role_name: AR_RL_AVTR_DEV_EDW_CORE
+  #   objects:
+  #     - name: WH_EDW_CORE_DEV
+  #       type: warehouse
+  #       privilege: USAGE
+  #       deprovision: false
 
-  - ar_role_name: AR_RL_AVTR_DEV_OP_TESTING
-    objects:
-      - name: WH_OP_TESTING_DEV
-        type: warehouse
-        privilege: USAGE
-        deprovision: false
+  # - ar_role_name: AR_RL_AVTR_DEV_OP_TESTING
+  #   objects:
+  #     - name: WH_OP_TESTING_DEV
+  #       type: warehouse
+  #       privilege: USAGE
+  #       deprovision: false
 
   # - ar_role_name: AR_RL_AVTR_QA_OP_TESTING
   #   objects:
