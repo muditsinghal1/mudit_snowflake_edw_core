@@ -7,7 +7,8 @@ on:
   push:
     branches:
     - main_datashare
-
+  schedule:
+     - cron: '*/5 * * * *'
 env:
   TOOLKIT_AUTH_TOKEN: ${{ secrets.TOOLKIT_AUTH_TOKEN }}
   TOOLKIT_CLI_DOWNLOAD_URL: ${{ secrets.TOOLKIT_CLI_DOWNLOAD_URL }}
@@ -24,7 +25,7 @@ jobs:
     defaults:
       run:
         working-directory: ./DataShareStack    
-        
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
