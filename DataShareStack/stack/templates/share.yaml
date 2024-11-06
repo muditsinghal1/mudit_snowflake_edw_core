@@ -1,0 +1,23 @@
+shares:
+ - name: {{name}}
+   accounts:
+     {% if accounts is truthy%}
+   {% for ac in accounts %}
+   - {{ac.name}}
+   {% endfor %}
+   {% endif %}
+
+   readerAccounts:
+   {% if readerAccounts is truthy%}
+   {% for rac in readerAccounts %}
+   - {{rac.name}}
+   {% endfor %}
+   {% endif %}
+
+shareGrants:
+{% for obj in objects %}
+- shareName: {{name}}
+  privilege: {{obj.privilege}}
+  objectType: {{obj.type}}
+  objectName: {{obj.name}}
+{% endfor %}
