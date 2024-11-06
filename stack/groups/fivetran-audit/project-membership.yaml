@@ -1,0 +1,25 @@
+template:
+  path: project-membership.yaml
+
+entries:
+
+  # - username: MUDIT.SINGHAL@AVANTORSCIENCES.COM
+  #   roles:
+  #     - name: FR_PRJ_RL_AVTR_FIVETRAN_AUDIT_READER
+  #       deprovision:  false
+
+  # - username: BALBIR.SINGH@AVANTORSCIENCES.COM
+  #   roles:
+  #     - name: FR_PRJ_RL_AVTR_FIVETRAN_AUDIT_READER
+  #       deprovision:  false
+
+  # - username: PRASHANT.GAJARE@AVANTORSCIENCES.COM
+  #   roles:
+  #     - name: FR_PRJ_RL_AVTR_FIVETRAN_AUDIT_READER
+  #       deprovision:  false
+
+  # - username: SANDEEP.MANIVANNAN@AVANTORSCIENCES.COM
+  #   roles:
+  #     - name: FR_PRJ_RL_AVTR_FIVETRAN_AUDIT_READER
+  #       deprovision:  false
+        

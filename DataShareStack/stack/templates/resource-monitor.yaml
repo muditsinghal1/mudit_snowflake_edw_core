@@ -1,0 +1,17 @@
+resourceMonitors:
+  - name: "{{ rmName }}"
+    {% if creditQuota is truthy %}
+    creditQuota: "{{ creditQuota }}"
+    {% endif %}
+    frequency: "{{ frequency }}"
+    startTimestamp: "'{{ startTimestamp }}'"
+    {% if endTimestamp is truthy %}
+    endTimestamp: "{{ endTimestamp }}"
+    {% endif %}
+    {% if triggers is truthy %}
+    triggers:
+      {% for t in triggers %}
+      - threshold: "{{ t.threshold }}"
+        action: "{{ t.action }}"
+      {% endfor %}
+    {% endif %}

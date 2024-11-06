@@ -1,0 +1,11 @@
+roles:
+- name: "{{ar_role_name}}"
+
+privilegeGrants:
+ {% for obj in objects %}
+  - privilege: "{{obj.privilege}}"
+    objectType: "{{obj.type}}"
+    objectName: "{{obj.name}}"
+    roleName: "{{ar_role_name}}"
+    destroy:  "{{obj.deprovision}}"
+ {% endfor %}

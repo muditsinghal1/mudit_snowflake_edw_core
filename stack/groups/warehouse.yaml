@@ -1,0 +1,30 @@
+template:
+  path: warehouse.yaml
+
+defaults:
+  warehouse_size: XSMALL
+  scaling_policy: ECONOMY
+  auto_suspend: 600
+  auto_resume: true
+  min_cluster_count: 1
+  max_cluster_count: 1
+  creditQuota: 100
+  frequency: MONTHLY
+  startTimestamp: IMMEDIATELY
+  destroy:  false
+
+entries:
+
+  - name: FIVETRAN_AUDIT
+    destroy: false
+    size: XSMALL
+    max_cluster_count: 1
+    resourceMonitor: AVTR_FIVTRAN_RM
+
+  - name: EDW_CORE_DEV
+    destroy: false
+    size: XSMALL
+    max_cluster_count: 1
+    resourceMonitor: AVTR_DEV_EDW_CORE_RM
+
+

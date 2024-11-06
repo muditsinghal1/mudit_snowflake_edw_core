@@ -1,0 +1,19 @@
+roles:
+  - name: "{{fo_role_name}}"
+roleGrants:
+  {% if roles is truthy %}
+  {% for rl in roles %}
+  - name: "{{rl.name}}"
+    toRoles:
+      - "{{fo_role_name}}"
+    destroy: "{{rl.deprovision}}"
+  {% endfor %}
+  {% endif %}
+
+#GRANT OWNERSHIP OF THE ROLE TO AZURE AD ROLE- AAD_PROVISIONER
+privilegeGrants:
+- privilege: "OWNERSHIP"
+  objectType: "ROLE"
+  objectName: {{fo_role_name}}
+  currentGrants: COPY
+  roleName: "AAD_PROVISIONER"

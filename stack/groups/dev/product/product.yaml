@@ -1,0 +1,24 @@
+template:
+  path: product.yaml
+entries:
+    # - product: DEV_EDW_CORE
+    #   destroy: false
+    #   specific_schemas:
+    #   - name: PUBLISHED
+    #     type: READ_ONLY
+    #     roleNameAbr: PUB
+    #     deprovision: false
+
+    #   # - name: STREAMLIT
+    #   #   type: READ_WRITE
+    #   #   roleNameAbr: ST
+    #   #   deprovision: false
+
+    # - product: DEV_OP_TESTING
+    #   destroy: false
+    #   specific_schemas:
+    #   - name: PUBLISHED
+    #     type: READ_ONLY
+    #     roleNameAbr: PUB
+    #     deprovision: false
+

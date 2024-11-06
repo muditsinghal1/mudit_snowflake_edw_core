@@ -1,0 +1,10 @@
+template:
+  path: access-role.yaml
+
+entries:
+  - ar_role_name: AR_RL_AVTR_OP_MGMT
+    objects:
+      - name: WH_OP_MGMT
+        type: warehouse
+        privilege: USAGE
+        deprovision: false

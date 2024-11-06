@@ -1,0 +1,9 @@
+template:
+  path: project-membership.yaml
+
+entries:
+  # - username: SVC_AVTR_PROD_FIVETRAN
+  #   roles:
+  #     - name: FR_PRJ_RL_AVTR_PROD_FIVETRAN_ENGINEER
+  #       deprovision:  false
+

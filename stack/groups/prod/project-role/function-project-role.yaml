@@ -1,0 +1,66 @@
+template:
+  path: function-project-role.yaml
+
+entries:
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_PROD_FIVETRAN_ENGINEER
+  #   roles:
+  #     - name: AR_RL_AVTR_PROD_FIVETRAN
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_EAGLE_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_UNICORN_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_EWM_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_CFIN_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ATG_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_ARCHIVAL_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_MASTER_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_TPE_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_TPN_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_IM_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_STIBO_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_CUSTOMER_SERVICE_RW
+  #       deprovision: false
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_PROD_FIVETRAN_READER
+  #   roles:
+  #     - name: AR_RL_AVTR_FIVETRAN_AUDIT
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_EAGLE_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_UNICORN_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_EWM_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_SAP_CFIN_RO
+  #       deprovision: false
+  #     - name: AR_RL_AVTR_PROD_FIVETRAN
+  #       deprovision: false
+  #     - name: AR_RL_AVTR_FIVETRAN_AUDIT
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ATG_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_ARCHIVAL_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_MASTER_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_TPE_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_ITS_TPN_RO
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_IM_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_STIBO_RW
+  #       deprovision: false
+  #     - name: DR_RL_AVTR_S_PROD_CUSTOMER_SERVICE_RW
+  #       deprovision: false

@@ -1,0 +1,20 @@
+roles:
+  - name: "{{fr_role_name}}"
+
+roleGrants:
+  {% if roles is truthy %}
+  {% for rl in roles %}
+  - name: "{{rl.name}}"
+    toRoles:
+      - "{{fr_role_name}}"
+    destroy: "{{rl.deprovision}}"
+  {% endfor %}
+  {% endif %}
+
+#UNCOMMENT BELOW ONCE BALBIR IS BACK, CHANGING OWNERSHIP OF FR ROLE MAY IMPACT RUNNING JOBS. 
+privilegeGrants:
+  - privilege: "OWNERSHIP"
+    objectType: "ROLE"
+    objectName: {{fr_role_name}}
+    roleName: "AAD_PROVISIONER"
+    currentGrants: COPY

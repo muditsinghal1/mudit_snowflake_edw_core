@@ -1,0 +1,15 @@
+template:
+  path: function-project-role.yaml
+
+entries: 
+
+  # - fr_role_name: FR_PRJ_RL_AVTR_FIVETRAN_AUDIT_READER
+  #   roles:
+  #     - name: DR_RL_AVTR_S_FIVETRAN_AUDIT_RO
+  #       deprovision: false
+  #     - name: AR_RL_AVTR_FIVETRAN_AUDIT
+  #       deprovision: false
+
+
+
+
