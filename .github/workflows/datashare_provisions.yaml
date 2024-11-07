@@ -1,13 +1,14 @@
-name: Snowflake Provisioning
+name: Snowflake DataShare Provisioning and Grants Scheduling
 
 on:
   pull_request:
     branches:
-      - 'feature/main_*'
+      - 'feature/maindatashare_*'
   push:
     branches:
-    - main
-
+    - main_datashare
+  schedule:
+     - cron: "*/10 * * * *"
 env:
   TOOLKIT_AUTH_TOKEN: ${{ secrets.TOOLKIT_AUTH_TOKEN }}
   TOOLKIT_CLI_DOWNLOAD_URL: ${{ secrets.TOOLKIT_CLI_DOWNLOAD_URL }}
@@ -19,13 +20,17 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    defaults:
+      run:
+        working-directory: ./DataShareStack    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
 
     - name: Download the toolkit
       shell: bash
+      
       run: |
         chmod +x bin/install-toolkit-cli
         bin/install-toolkit-cli
@@ -45,11 +50,11 @@ jobs:
     - name: Plan on pull request
       if: github.event_name == 'pull_request'
       shell: bash
-      run: install/toolkit provision apply --plan | tee plan.log
+      run: install/toolkit provision apply --plan --ignore-cache | tee plan.log
       
     - name: Apply changes on merge to master
       shell: bash
-      run: install/toolkit provision apply --approve | tee plan.log      
+      run: install/toolkit provision apply --approve --ignore-cache | tee plan.log      
       if: github.event_name == 'push'
 
   #  - name: Create comment

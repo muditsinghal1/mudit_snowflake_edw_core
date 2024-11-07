@@ -1,0 +1,34 @@
+template:
+  path: share.yaml
+
+entries:
+ - name: OP_TESTING_TEST_SHARE
+   secure_share_objects: false
+   destroy: false
+   accounts:
+   - name: "JS76115"   #PROVIDE ACCOUNT LOCATOR VQNWGIX.JS76115
+     deprovision: false
+  #  readerAccounts:
+  #  - name: "ReaderXYZ"
+  #    deprovision: false   
+   objects:
+   - name: AVTR_DB_OP_MGMT
+     type: DATABASE
+     privilege: USAGE
+     deprovision: false
+   - name: AVTR_DB_OP_MGMT.RAW
+     type: SCHEMA
+     privilege: USAGE
+     deprovision: false
+   - name: AVTR_DB_OP_MGMT.RAW.ID
+     type: TABLE
+     privilege: SELECT
+     deprovision: false
+   - name: AVTR_DB_OP_MGMT.RAW.sec_count_id
+     type: VIEW
+     privilege: SELECT
+     deprovision: false        
+  #  - name: DEV_EDW_CORE.PUBLISHED.SECURE_VIEW1
+  #    type: VIEW
+  #    privilege: SELECT
+  #    deprovision: false    

@@ -1,0 +1,70 @@
+template:
+  path: resource-monitor.yaml
+
+defaults:
+  frequency: MONTHLY
+  startTimestamp: "IMMEDIATELY"
+  triggers:
+    - threshold: 75
+      action: NOTIFY
+    - threshold: 90
+      action: SUSPEND
+    - threshold: 100
+      action: SUSPEND_IMMEDIATE
+
+entries:
+  # - rmName: AVTR_FIVTRAN_RM
+  #   triggers:
+  #   - threshold: 75
+  #     action: NOTIFY
+  #   - threshold: 90
+  #     action: NOTIFY
+  #   - threshold: 100
+  #     action: NOTIFY
+
+  # - rmName: AVTR_PROVISION_RM
+  #   triggers:
+  #   - threshold: 75
+  #     action: NOTIFY
+  #   - threshold: 90
+  #     action: NOTIFY
+  #   - threshold: 100
+  #     action: NOTIFY
+
+  # - rmName: AVTR_DEV_OP_TESTING
+  #   destory: true
+  #   triggers:
+  #   - threshold: 75
+  #     action: NOTIFY
+  #   - threshold: 90
+  #     action: NOTIFY
+  #   - threshold: 100
+  #     action: NOTIFY
+  
+  # - rmName: AVTR_DEV_OP_TESTING_RM
+  #   destory: false
+  #   triggers:
+  #   - threshold: 75
+  #     action: NOTIFY
+  #   - threshold: 90
+  #     action: NOTIFY
+  #   - threshold: 100
+  #     action: NOTIFY
+
+  # - rmName: AVTR_DEV_EDW_CORE_RM
+  #   triggers:
+  #   - threshold: 75
+  #     action: NOTIFY
+  #   - threshold: 90
+  #     action: NOTIFY
+  #   - threshold: 100
+  #     action: NOTIFY
+
+  - rmName: MUDIT_TEST_RM
+    triggers:
+    - threshold: 75
+      action: NOTIFY
+    - threshold: 90
+      action: NOTIFY
+    - threshold: 100
+      action: NOTIFY
