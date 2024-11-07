@@ -3,6 +3,7 @@ template:
 
 entries:
  - name: OP_TESTING_TEST_SHARE
+   secure_share_objects: false
    destroy: false
    accounts:
    - name: "JS76115"   #PROVIDE ACCOUNT LOCATOR VQNWGIX.JS76115
