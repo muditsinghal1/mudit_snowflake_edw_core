@@ -24,7 +24,7 @@ entries:
      type: TABLE
      privilege: SELECT
      deprovision: false
-   - name: AVTR_DB_OP_MGMT.RAW.COUNT_ID
+   - name: AVTR_DB_OP_MGMT.RAW.sec_count_id
      type: VIEW
      privilege: SELECT
      deprovision: false        
