@@ -1,5 +1,8 @@
 shares:
  - name: {{name}}
+   properties:
+    #  SECURE_OBJECTS_ONLY: {{secure_share_objects}}
+     comment: "New Comment"
    accounts:
      {% if accounts is truthy%}
    {% for ac in accounts %}
