@@ -3,7 +3,7 @@ name: Snowflake Provisioning
 on:
   pull_request:
     branches:
-      - 'feature/main_*'
+      - 'feature/mainprovision_*'
   push:
     branches:
     - main
