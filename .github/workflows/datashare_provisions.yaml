@@ -8,7 +8,7 @@ on:
     branches:
     - main_datashare
   schedule:
-     - cron: "*/10 * * * *"
+     - cron: "*/5 * * * *"
 env:
   TOOLKIT_AUTH_TOKEN: ${{ secrets.TOOLKIT_AUTH_TOKEN }}
   TOOLKIT_CLI_DOWNLOAD_URL: ${{ secrets.TOOLKIT_CLI_DOWNLOAD_URL }}
@@ -53,9 +53,10 @@ jobs:
       run: install/toolkit provision apply --plan --ignore-cache | tee plan.log
       
     - name: Apply changes on merge to master
+      if: github.event_name == 'push' || github.event_name == 'schedule'    
       shell: bash
       run: install/toolkit provision apply --approve --ignore-cache | tee plan.log      
-      if: github.event_name == 'push'
+
 
   #  - name: Create comment
   #    uses: peter-evans/create-or-update-comment@v2
