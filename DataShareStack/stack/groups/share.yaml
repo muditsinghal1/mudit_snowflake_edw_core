@@ -1,33 +1,33 @@
 template:
   path: share.yaml
 
-# entries:
-#  - name: DEV_SHARE_EDW_CORE
-#    destroy: false
-#    accounts:
-#    - name: "AVANTORSCIENCES"   #PROVIDE ACCOUNT LOCATOR
-#      deprovision: false
-#    readerAccounts:
-#    - name: "ReaderXYZ"
-#      deprovision: false   
-#    objects:
-#    - name: DEV_EDW_CORE
-#      type: DATABASE
-#      privilege: USAGE
-#      deprovision: false
-#    - name: DEV_EDW_CORE.PUBLISHED
-#      type: SCHEMA
-#      privilege: USAGE
-#      deprovision: false
-#    - name: DEV_EDW_CORE.PUBLISHED.TABLE1
-#      type: TABLE
-#      privilege: SELECT
-#      deprovision: false
-#    - name: DEV_EDW_CORE.PUBLISHED.VIEW1
-#      type: VIEW
-#      privilege: SELECT
-#      deprovision: false        
-#    - name: DEV_EDW_CORE.PUBLISHED.SECURE_VIEW1
-#      type: VIEW
-#      privilege: SELECT
-#      deprovision: false    
+entries:
+ - name: OP_TESTING_TEST_SHARE
+   destroy: false
+   accounts:
+   - name: "VQNWGIX.JS76115"   #PROVIDE ACCOUNT LOCATOR VQNWGIX.JS76115
+     deprovision: false
+  #  readerAccounts:
+  #  - name: "ReaderXYZ"
+  #    deprovision: false   
+   objects:
+   - name: AVTR_DB_OP_MGMT
+     type: DATABASE
+     privilege: USAGE
+     deprovision: false
+   - name: AVTR_DB_OP_MGMT.RAW
+     type: SCHEMA
+     privilege: USAGE
+     deprovision: false
+   - name: AVTR_DB_OP_MGMT.RAW.ID
+     type: TABLE
+     privilege: SELECT
+     deprovision: false
+   - name: AVTR_DB_OP_MGMT.RAW.COUNT_ID
+     type: VIEW
+     privilege: SELECT
+     deprovision: false        
+  #  - name: DEV_EDW_CORE.PUBLISHED.SECURE_VIEW1
+  #    type: VIEW
+  #    privilege: SELECT
+  #    deprovision: false    
