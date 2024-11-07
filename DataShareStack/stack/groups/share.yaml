@@ -5,7 +5,7 @@ entries:
  - name: OP_TESTING_TEST_SHARE
    destroy: false
    accounts:
-   - name: "VQNWGIX.JS76115"   #PROVIDE ACCOUNT LOCATOR VQNWGIX.JS76115
+   - name: "JS76115"   #PROVIDE ACCOUNT LOCATOR VQNWGIX.JS76115
      deprovision: false
   #  readerAccounts:
   #  - name: "ReaderXYZ"
