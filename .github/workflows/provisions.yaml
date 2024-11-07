@@ -49,8 +49,11 @@ jobs:
       
     - name: Apply changes on merge to master
       shell: bash
-      run: install/toolkit provision apply --approve | tee plan.log      
       if: github.event_name == 'push' && ${{  contains( github.head_ref, 'feature/mainprovision_' )}}
+      run: |
+         echo $github.head_ref
+         install/toolkit provision apply --approve | tee plan.log      
+
 
   #  - name: Create comment
   #    uses: peter-evans/create-or-update-comment@v2
