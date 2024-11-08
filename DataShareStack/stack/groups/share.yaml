@@ -4,6 +4,7 @@ template:
 entries:
  - name: OP_TESTING_TEST_SHARE
    secure_share_objects: false
+   create_share: true
    destroy: false
    accounts:
    - name: "JS76115"   #PROVIDE ACCOUNT LOCATOR VQNWGIX.JS76115
@@ -28,7 +29,6 @@ entries:
      type: VIEW
      privilege: SELECT
      deprovision: false        
-  #  - name: DEV_EDW_CORE.PUBLISHED.SECURE_VIEW1
-  #    type: VIEW
-  #    privilege: SELECT
-  #    deprovision: false    
+
+
+

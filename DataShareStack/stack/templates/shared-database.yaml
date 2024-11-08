@@ -1,0 +1,10 @@
+sharedDatabases:
+- name: {{name}}
+  shareName: {{share_name}}
+
+
+
+ 
+
+
+
