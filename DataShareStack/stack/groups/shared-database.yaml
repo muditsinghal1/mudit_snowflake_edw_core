@@ -2,10 +2,12 @@ template:
   path: shared-database.yaml
 
 entries:
- - name: MUDIT14_SHARED_DB
+ - sh_db_name: MUDIT14_SHARED_DB
    destroy: false
-   share_name: MUDIT14_DB_SNOWFLAKE_SECURE_SHARE_1
-
+   share_name: JS76115.MUDIT14_DB_SNOWFLAKE_SECURE_SHARE_1   #inbound_share_account_locator.share_name
+   roles:
+    - name: "SYSADMIN"
+      deprovision: false
 
  
 
