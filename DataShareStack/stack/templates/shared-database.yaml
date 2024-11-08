@@ -2,16 +2,16 @@ sharedDatabases:
 - name: {{sh_db_name}}
   shareName: {{share_name}}
 
-privilegeGrants:
-  {% if roles is truthy %}
-  {% for rl in roles %}
-  - privilege: "IMPORTED PRIVILEGES"
-    objectType: "DATABASE"
-    objectName: {{sh_db_name}}
-    roleName: {{rl.name}}
-    destroy: {{rl.deprovision}}
-  {% endfor %}
-  {% endif %}
+# privilegeGrants:
+#   {% if roles is truthy %}
+#   {% for rl in roles %}
+#   - privilege: "IMPORTED PRIVILEGES"
+#     objectType: "DATABASE"
+#     objectName: {{sh_db_name}}
+#     roleName: {{rl.name}}
+#     destroy: {{rl.deprovision}}
+#   {% endfor %}
+#   {% endif %}
 
  
 
