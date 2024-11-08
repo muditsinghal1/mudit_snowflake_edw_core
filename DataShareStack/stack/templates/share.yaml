@@ -1,3 +1,4 @@
+{% if create_share is truthy %}
 shares:
  - name: {{name}}
    properties:
@@ -16,11 +17,15 @@ shares:
    - {{rac.name}}
    {% endfor %}
    {% endif %}
+{% endif %}
 
+{% if create_share is truthy %}
 shareGrants:
 {% for obj in objects %}
 - shareName: {{name}}
   privilege: {{obj.privilege}}
   objectType: {{obj.type}}
   objectName: {{obj.name}}
+  destroy: {{obj.deprovision}}
 {% endfor %}
+{% endif %}
