@@ -1,0 +1,11 @@
+template:
+  path: external-role.yaml
+
+entries:
+
+  # - fo_role_name: EXT_RL_AVTR_DEV_AVTR_FEEDS_DEV_SHARE
+  #   create_role: true
+  #   destroy: false
+  #   roles:
+  #    - name:
+  #      deprovision: false
