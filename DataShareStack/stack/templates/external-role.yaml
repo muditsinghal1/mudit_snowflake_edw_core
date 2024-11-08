@@ -1,0 +1,15 @@
+{% if create_role is truthy %}
+roles:
+  - name: "{{fo_role_name}}"
+{% endif %}
+
+privilegeGrants:
+  {% if roles is truthy %}
+  {% for rl in roles %}
+  - privilege: "IMPORTED PRIVILEGES"
+    objectType: "DATABASE"
+    objectName: {{sh_db_name}}
+    roleName: {{rl.name}}
+    destroy: {{rl.deprovision}}
+  {% endfor %}
+  {% endif %}
