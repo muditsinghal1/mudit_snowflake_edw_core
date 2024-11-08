@@ -60,11 +60,11 @@ entries:
   #   - threshold: 100
   #     action: NOTIFY
 
-  - rmName: MUDIT_TEST_RM
-    triggers:
-    - threshold: 75
-      action: NOTIFY
-    - threshold: 90
-      action: NOTIFY
-    - threshold: 100
-      action: NOTIFY
+  # - rmName: MUDIT_TEST_RM
+  #   triggers:
+  #   - threshold: 75
+  #     action: NOTIFY
+  #   - threshold: 90
+  #     action: NOTIFY
+  #   - threshold: 100
+  #     action: NOTIFY

@@ -15,23 +15,23 @@ defaults:
 
 entries:
 
-  # - name: FIVETRAN_AUDIT
+  # # - name: FIVETRAN_AUDIT
+  # #   destroy: false
+  # #   size: XSMALL
+  # #   max_cluster_count: 1
+  # #   resourceMonitor: AVTR_FIVTRAN_RM
+
+  # # - name: EDW_CORE_DEV
+  # #   destroy: false
+  # #   size: XSMALL
+  # #   max_cluster_count: 1
+  # #   resourceMonitor: AVTR_DEV_EDW_CORE_RM
+
+
+  # - name: MUDIT_TEST
   #   destroy: false
   #   size: XSMALL
   #   max_cluster_count: 1
-  #   resourceMonitor: AVTR_FIVTRAN_RM
-
-  # - name: EDW_CORE_DEV
-  #   destroy: false
-  #   size: XSMALL
-  #   max_cluster_count: 1
-  #   resourceMonitor: AVTR_DEV_EDW_CORE_RM
-
-
-  - name: MUDIT_TEST
-    destroy: false
-    size: XSMALL
-    max_cluster_count: 1
-    resourceMonitor: MUDIT_TEST_RM
+  #   resourceMonitor: MUDIT_TEST_RM
 
 
