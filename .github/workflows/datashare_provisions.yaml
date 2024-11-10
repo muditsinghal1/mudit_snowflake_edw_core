@@ -55,7 +55,10 @@ jobs:
     - name: Apply changes on merge to master
       if: github.event_name == 'push' || github.event_name == 'schedule'    
       shell: bash
-      run: install/toolkit provision apply --approve --ignore-cache | tee plan.log      
+      run: |
+        echo "BRANCH_NAME=$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_ENV
+        echo "The branch name is: ${{ env.BRANCH_NAME }}"
+        install/toolkit provision apply --approve --ignore-cache | tee plan.log      
 
 
   #  - name: Create comment

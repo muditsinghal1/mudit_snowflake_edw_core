@@ -29,6 +29,8 @@ jobs:
       run: |
         chmod +x bin/install-toolkit-cli
         bin/install-toolkit-cli
+        echo "BRANCH_NAME=$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_ENV
+        echo "The branch name is: ${{ env.BRANCH_NAME }}"
 
     - name: Set up Java 
       uses: actions/setup-java@v3
@@ -49,7 +51,6 @@ jobs:
       
     - name: Apply changes on merge to master
       shell: bash
-      
       if: github.event_name == 'push'  && github.event.pull_request.head.ref == '/feature/mainprovision_.+/'
       run: |
          echo "BRANCH_NAME=$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_ENV
