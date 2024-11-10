@@ -34,7 +34,12 @@ jobs:
       run: |
         chmod +x bin/install-toolkit-cli
         bin/install-toolkit-cli
-
+        echo "BRANCH_NAME1=$(echo ${{ github.event.pull_request.head.ref }})" 
+        echo "BRANCH_NAME2=$(echo ${{ github.head_ref }})" 
+        echo "BRANCH_NAME3=$(echo ${{ github.ref_name }})" 
+        echo "BRANCH_NAME4=$(echo ${{ github.ref }})" 
+        echo "BRANCH_NAME5=$(echo ${{ github.base_ref }})" 
+        echo "BRANCH_NAME3=$(echo ${{ github.event.pull_request.head.label}})" 
     - name: Set up Java 
       uses: actions/setup-java@v3
       with:
