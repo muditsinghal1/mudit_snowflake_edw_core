@@ -28,7 +28,7 @@ entries:
    - name: AVTR_DB_OP_MGMT.RAW.sec_count_id
      type: VIEW
      privilege: SELECT
-     deprovision: false        
+     deprovision: true        
 
 
 
