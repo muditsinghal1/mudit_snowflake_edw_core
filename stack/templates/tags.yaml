@@ -1,0 +1,22 @@
+tags:
+  - name: "{{ name }}" 
+    database: "{{ database }}"
+    schema: "{{ schema }}"
+    {% if allowedValues is truthy %}
+    allowedValues: 
+    {% for value in allowedValues %}
+      - {{ value }}
+    {% endfor %}
+    {% endif %}
+
+    {% if maskingPolicies is truthy %}
+    maskingPolicies: 
+    {% for value in maskingPolicies %}
+      - {{ value }}
+    {% endfor %}
+    {% endif %}
+    
+    properties: # (optional)
+      {% if comment is truthy %}
+      comment: "{{ comment }}"
+      {% endif %}

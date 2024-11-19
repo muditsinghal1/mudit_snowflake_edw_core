@@ -11,8 +11,6 @@ on:
   #    - cron: "*/5 * * * *"
 env:
   TOOLKIT_AUTH_TOKEN: ${{ secrets.TOOLKIT_AUTH_TOKEN }}
-  TOOLKIT_CLI_DOWNLOAD_URL: ${{ secrets.TOOLKIT_CLI_DOWNLOAD_URL }}
-  TOOLKIT_CLI_VERSION: "0.56.0"
   SNOWFLAKE_PRIVATE_KEY_PEM: ${{ secrets.SNOWFLAKE_PRIVATE_KEY_PEM }}
   SNOWFLAKE_PRIVATE_KEY_FILE: ${{ vars.SNOWFLAKE_PRIVATE_KEY_FILE }}
   SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: ${{ secrets.SNOWFLAKE_PRIVATE_KEY_PASSPHRASE }}
@@ -67,11 +65,3 @@ jobs:
         echo "The branch name is: ${{ env.BRANCH_NAME }}"
         install/toolkit provision apply --approve --ignore-cache | tee plan.log      
 
-
-  #  - name: Create comment
-  #    uses: peter-evans/create-or-update-comment@v2
-  #    if: github.event_name == 'pull_request'
-  #    with:
-  #      issue-number: ${{ github.event.pull_request.number }}
-  #      body-file: 'plan.log'
-  #
