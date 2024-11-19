@@ -31,7 +31,33 @@ entries:
   #       deprovision: true
 
 
-
+  - fr_role_name: AD_GRP_FR_OPERATION_TEST
+    create_role: true
+    tags:
+     - tag_name: avtr_db_op_mgmt.raw.granular_access
+       tag_value: 'null'     # IF WANT TO UNSET use 'null' for tag_value
+     - tag_name: avtr_db_op_mgmt.raw.test_access
+       tag_value: 'null'     # IF WANT TO UNSET use 'null' for tag_value
+     - tag_name: avtr_db_op_mgmt.cost_center_tag.test_access
+       tag_value: 'BU1'     # IF WANT TO UNSET use 'null' for tag_value       
+    destroy: false
+    roles:
+      - name: SECURITYADMIN  #GRANTED THIS ACCESS FOR GRANTS MANAGEMENT
+        deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_DEV_EDW_CORE_ENGINEER
+      #   deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_OP_MGMT_ENGINEER
+      #   deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_PROD_FIVETRAN_ENGINEER
+      #   deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_QA_FIVETRAN_ENGINEER
+      #   deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_DEV_FIVETRAN_ENGINEER
+      #   deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_DEV_OP_TESTING_ENGINEER
+      #   deprovision: false
+      # - name: AD_GRP_FR_PRJ_RL_AVTR_QA_EDW_CORE_ENGINEER
+      #   deprovision: false
 
 
 

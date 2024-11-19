@@ -1,0 +1,16 @@
+template:
+  path: tags.yaml
+
+entries:
+  - name: cost_center_tag
+    database: avtr_db_op_mgmt
+    schema: raw
+    allowedValues:
+     - BU1
+     - BU2 
+
+    # maskingPolicies:
+    # - db1.schema1.mp1
+    # - db1.schema1.mp1
+    properties:
+      comment: This is an example tag
