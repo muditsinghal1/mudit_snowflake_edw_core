@@ -6,7 +6,7 @@ PROVISION_VERSION=${VERSION:-$DEFAULT_VERSION}
 echo "PROVISION AUTOMATION VERSION: $PROVISION_VERSION"
 echo "https://repo.phdata.io/3BCJzuXgtfTCoa6c/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/$PROVISION_VERSION/toolkit-cli-$PROVISION_VERSION.zip"
 echo "https://repo.phdata.io/MUDIT/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/$PROVISION_VERSION/toolkit-cli-$PROVISION_VERSION.zip"
-path= https://repo.phdata.io/3BCJzuXgtfTCoa6c/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/$PROVISION_VERSION/toolkit-cli-$PROVISION_VERSION.zip
+path = "https://repo.phdata.io/3BCJzuXgtfTCoa6c/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/$PROVISION_VERSION/toolkit-cli-$PROVISION_VERSION.zip"
 echo "PROVISION AUTOMATION DOWNLOAD URL: $path"
 
 curl --fail --output toolkit-cli.zip "$path"
